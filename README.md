@@ -8,8 +8,7 @@ Description: simple CSS reset, based on: <br>
 and some browser hooks...
 </p>
 
-```md 
-2019-11-10 Update```
+``2019-11-10 Update``
   ```css
 html,
 body {height: 100%;}  
@@ -30,4 +29,4 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {border-style: none;-moz-box-shadow: none;padding: 0;}
 ...
 [aria-hidden="false"][hidden] {display: initial;}
-[aria-hidden="false"][hidden]:not(:focus) {clip: rect(0, 0, 0, 0);position: absolute;}```
+[aria-hidden="false"][hidden]:not(:focus) {clip: rect(0, 0, 0, 0);position: absolute;}
