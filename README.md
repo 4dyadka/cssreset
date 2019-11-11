@@ -23,10 +23,6 @@ select::-ms-value {color: currentColor;}
 :invalid,
 :-moz-submit-invalid,
 :-moz-ui-invalid {box-shadow:none;-moz-box-shadow: none;outline: none;border: none;}
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {border-style: none;-moz-box-shadow: none;padding: 0;}
 ...
 [aria-hidden="false"][hidden] {display: initial;}
 [aria-hidden="false"][hidden]:not(:focus) {clip: rect(0, 0, 0, 0);position: absolute;}
