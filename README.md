@@ -1,11 +1,10 @@
-## cssreset
+# CSSReset
 
-File: **reset.css**
-Description: *simple CSS reset, based on*
-- [Normalize v8.0.1](github.com/necolas/normalize.css)
-- [CSS Reset v2.0-modified](meyerweb.com/eric/tools/css/reset)
+File: **reset.css** *(minified version: **reset.min.css**)*<br />
+Description: *simple CSS Reset clone. Based on*<br /> 
+[Normalize v8.0.1](github.com/necolas/normalize.css),<br />
+[CSS Reset v2.0-modified](meyerweb.com/eric/tools/css/reset)<br /> 
 *and some browser hooks...*
-
 
 2019-11-10 *Update and add minified version*
   ```css
@@ -27,5 +26,6 @@ select::-ms-value {color: currentColor;}
 [aria-hidden="false"][hidden]:not(:focus) {clip: rect(0,0,0,0);position: absolute;}
 ```
 TODO:
-- [x] Pre-release may be done  :smirk:
+- [x] Pre-release may be done  :smirk: 
+- [x] Remove Mozilla `focus` style for `input` elements
 - [x] Add minified version *reset.min.css*  
