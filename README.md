@@ -8,7 +8,7 @@ Description: simple CSS reset, based on: <br>
 and some browser hooks...
 </p>
 
-``2019-11-10 Update``
+``2019-11-10 Update and minify``
   ```css
 html,
 body {height: 100%;}  
@@ -17,7 +17,7 @@ select::-ms-expand {display: none;}
 select::-ms-value {color: currentColor;}
 :-ms-input-placeholder, 
 ::-moz-placeholder, 
-::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.54);}
+::-webkit-input-placeholder {color: rgba(0,0,0,.54);}
 ::-ms-reveal {display: none;}
 ...
 :invalid,
@@ -25,4 +25,4 @@ select::-ms-value {color: currentColor;}
 :-moz-ui-invalid {box-shadow:none;-moz-box-shadow: none;outline: none;border: none;}
 ...
 [aria-hidden="false"][hidden] {display: initial;}
-[aria-hidden="false"][hidden]:not(:focus) {clip: rect(0, 0, 0, 0);position: absolute;}
+[aria-hidden="false"][hidden]:not(:focus) {clip: rect(0,0,0,0);position: absolute;}
