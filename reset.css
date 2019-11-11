@@ -1,3 +1,14 @@
+/* 
+File: includes/css/correct.css
+Date: Nov 07, 2019
+-------------------
+10-11-2019 - last updated
+-------------------
+*/
+html,
+body {
+  height: 100%;
+}
 html {
   line-height: 1.15;
   font-size: 100%;
@@ -146,8 +157,9 @@ samp {
 /* Add Keyboard for action */
 kbd span {
   font-size: .94em;
+  font-style: normal;
   color: #777;
-  padding: .2em .5em;
+  padding: .2em .6em;
   border: 1px solid #cecece;
   border-radius: 5px;
 }
@@ -256,6 +268,7 @@ select {
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none; 
 }
 select::-ms-expand {
   display: none;
@@ -263,8 +276,13 @@ select::-ms-expand {
 select::-ms-value {
   color: currentColor;
 }
-:-ms-input-placeholder {
+:-ms-input-placeholder,
+::-moz-placeholder,
+::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.54);
+}
+::-ms-reveal { 
+display: none; 
 }
 button,
 [type="button"],
@@ -431,6 +449,7 @@ template {
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+/* Add HYPNENS */
 [lang] {
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -443,6 +462,7 @@ template {
   -webkit-hyphenate-limit-chars: 6 3 2;
   -ms-hyphenate-limit-chars: 6 3 2;
 }
+/* Add CLEARFIX */
 .clearfix::before, 
 .clearfix::after {content: " ";display: table;}
 .clearfix::after {clear: both;}
