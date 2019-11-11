@@ -26,6 +26,6 @@ select::-ms-value {color: currentColor;}
 [aria-hidden="false"][hidden]:not(:focus) {clip: rect(0,0,0,0);position: absolute;}
 ```
 TODO:
-- [x] Pre-release may be done  :smirk: 
+- [x] Pre-release *may be done*  :smirk: 
 - [x] Remove Mozilla `focus` style for `input` elements
 - [x] Add minified version *reset.min.css*  
