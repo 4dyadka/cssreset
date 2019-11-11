@@ -8,7 +8,8 @@ Description: simple CSS reset, based on: <br>
 and some browser hooks...
 </p>
 
-###2019-11-10 Update
+```md 
+2019-11-10 Update````
   ```css
 html,
 body {height: 100%;}  
