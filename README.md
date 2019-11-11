@@ -1,11 +1,11 @@
 ## cssreset
-<p>
-File: <strong>reset.css</strong><br>
-Description: simple CSS reset, based on <br>
-- <a href="//github.com/necolas/normalize.css" target="_blank" rel="nofollow">Normalize.css v8.0.1</a>, <br>
-- <a href="//meyerweb.com/eric/tools/css/reset/" target="_blank" rel="nofollow">Reset v2.0-modified</a> <br>
-and some browser hooks...
-</p>
+
+File: **reset.css**
+Description: *simple CSS reset, based on*
+- [Normalize v8.0.1](github.com/necolas/normalize.css)
+- [CSS Reset v2.0-modified](meyerweb.com/eric/tools/css/reset)
+*and some browser hooks...*
+
 
 2019-11-10 *Update and add minified version*
   ```css
