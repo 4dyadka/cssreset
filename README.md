@@ -7,7 +7,7 @@ Description: simple CSS reset, based on <br>
 and some browser hooks...
 </p>
 
-2019-11-10 *Update and minify*
+2019-11-10 *Update and add minified version*
   ```css
 html,
 body {height: 100%;}  
@@ -27,4 +27,5 @@ select::-ms-value {color: currentColor;}
 [aria-hidden="false"][hidden]:not(:focus) {clip: rect(0,0,0,0);position: absolute;}
 ```
 TODO:
-- [x] Pre-release may be done :simple_smile:
+- [x] Pre-release may be done  :smirk:
+- [x] Add minified version *reset.min.css*  
