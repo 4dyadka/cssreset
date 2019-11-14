@@ -1,7 +1,7 @@
 # CSSReset
 
 File: **reset.css** *(minified version: **reset.min.css**)*<br />
-Description: *simple CSS Reset clone. Based on*<br /> 
+Description: *simple CSS Reset clone for SARAYKA Project. Based on*<br /> 
 [Normalize v8.0.1](github.com/necolas/normalize.css),<br />
 [CSS Reset v2.0-modified](meyerweb.com/eric/tools/css/reset)<br /> 
 *and some browser hooks...*
