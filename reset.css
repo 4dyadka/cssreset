@@ -1,3 +1,15 @@
+/* 
+-------------------
+19-12-2019 - last updated
+v.1.1b
+-------------------
+*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; 
+  outline: 0;
+}
 html,
 body {
   height: 100%;
@@ -21,6 +33,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.15;
+}
+@-ms-viewport {
+  width: device-width;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
@@ -71,6 +86,8 @@ figcaption,
 figure,
 footer,
 header,
+hgroup,
+legend,
 main,
 menu,
 nav,
@@ -97,7 +114,7 @@ textarea {
 }
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 hr {
   box-sizing: content-box;
@@ -105,8 +122,10 @@ hr {
   overflow: visible;
 }
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace, Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Oxygen Mono, Liberation Mono;
   font-size: 1em;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
 }
 a {
   background-color: transparent;
@@ -114,13 +133,34 @@ a {
 :focus,
 :active,
 :hover {
+  outline: none;
   outline: 0;
   outline-width: 0;
 }
+:link, 
+:visited { 
+  text-decoration: none; 
+}
+a img, 
+:link img, 
+:visited img {
+  border:none; 
+}
 a[href], 
-input[type=image], 
+input[type="image"], 
 label[for] {
   cursor: pointer;
+}
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
 }
 abbr[title],
 acronym[title] {
@@ -129,6 +169,21 @@ acronym[title] {
   text-decoration: underline dotted;
   text-decoration-skip-ink: auto;
   cursor: help;
+}
+ins {
+  background-color: #ff9;
+  color: #444;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #444; 
+  font-style: italic;
+  font-weight: bold;
+}
+address {
+  font-style: normal;
+  line-height: inherit;
 }
 b,
 strong {
@@ -144,9 +199,10 @@ kbd,
 tt,
 var,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace, Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Oxygen Mono, Liberation Mono;
   font-size: 1em;
 }
+/* Add Keyboard for action */
 kbd span {
   font-size: .94em;
   font-style: normal;
@@ -221,17 +277,16 @@ figure,
 form {
   margin: 0;
 }
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: .35em .625em .75em;
-}
 legend {
-  color: inherit;
-  border: 0;
-  padding: 0;
+  width: 100%;
   max-width: 100%;
+  padding: 0;
+  margin-bottom: .5em;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
   white-space: normal;
+  border: 0;
   *margin-left: -7px;
 }
 button,
@@ -269,15 +324,15 @@ select::-ms-value {
 :-ms-input-placeholder,
 ::-moz-placeholder,
 ::-webkit-input-placeholder {
-  color: rgba(0,0,0,.54);
+  color: rgba(0, 0, 0, 0.54);
 }
 ::-ms-reveal { 
-display: none; 
+  display: none; 
 }
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
   *overflow: visible;
@@ -295,23 +350,24 @@ html input[disabled] {
   border: none;
 }
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   -moz-box-shadow: none;
   padding: 0;
 }
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 fieldset {
-  padding: .35em .75em .625em;
-  border: 0;
+  min-width: 0;
+  padding: 0;
   margin: 0;
+  border: 0;
 }
 legend {
   box-sizing: border-box;
@@ -329,16 +385,22 @@ textarea {
   vertical-align: top;
   resize: vertical;
 }
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-[type=search] {
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
   -webkit-box-sizing: content-box;
@@ -359,6 +421,8 @@ textarea {
 a,
 area,
 button,
+[role="button"],
+input:not([type=range]),
 input,
 label,
 select,
@@ -367,6 +431,9 @@ textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+}
+[tabindex="-1"]:focus {
+  outline: none !important;
 }
 dialog {
   background-color: white;
@@ -388,6 +455,10 @@ dialog {
 dialog:not([open]) {
   display: none;
 }
+	/* blockquote p {
+  		
+	   }
+	*/
 blockquote, 
 q {
   quotes: none;
@@ -410,12 +481,13 @@ template {
   display: none;
 }
 .chromeframe {
-  margin: .2em 0;
+  margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: .2em 0;
+  padding: 0.2em 0;
 }
-[aria-busy=true] {
+/* Add ARIA Cursors & Controls */
+[aria-busy="true"] {
   cursor: progress;
 }
 [aria-controls] {
@@ -424,20 +496,21 @@ template {
 [aria-disabled] {
   cursor: default;
 }
-[aria-disabled=true],
+[aria-disabled="true"],
 [disabled] {
   cursor: not-allowed;
 }
-[aria-busy=true] {
+[aria-busy="true"] {
   cursor: progress;
 }
-[aria-hidden=false][hidden] {
+[aria-hidden="false"][hidden] {
   display: initial;
 }
-[aria-hidden=false][hidden]:not(:focus) {
-  clip: rect(0,0,0,0);
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+/* Add HYPNENS */
 [lang] {
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -450,6 +523,7 @@ template {
   -webkit-hyphenate-limit-chars: 6 3 2;
   -ms-hyphenate-limit-chars: 6 3 2;
 }
+/* Add CLEARFIX */
 .clearfix::before, 
 .clearfix::after {content: " ";display: table;}
 .clearfix::after {clear: both;}
