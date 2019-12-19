@@ -6,27 +6,8 @@ Description: *simple CSS Reset clone for SARAYKA Project. Based on*<br />
 [CSS Reset v2.0-modified](meyerweb.com/eric/tools/css/reset)<br /> 
 *and some browser hooks...*
 
-2019-12-19 *v.1.1b*
-2019-11-10 *Update and add minified version*
-  ```css
-html,
-body {height: 100%;}  
-...
-select::-ms-expand {display: none;}
-select::-ms-value {color: currentColor;}
-:-ms-input-placeholder, 
-::-moz-placeholder, 
-::-webkit-input-placeholder {color: rgba(0,0,0,.54);}
-::-ms-reveal {display: none;}
-...
-:invalid,
-:-moz-submit-invalid,
-:-moz-ui-invalid {box-shadow:none;-moz-box-shadow: none;outline: none;border: none;}
-...
-[aria-hidden="false"][hidden] {display: initial;}
-[aria-hidden="false"][hidden]:not(:focus) {clip: rect(0,0,0,0);position: absolute;}
-```
 TODO:
+- [x] Release v.1.1b (2019-12-19)
 - [x] Pre-release *may be done*  :smirk: 
 - [x] Remove Mozilla `focus` style for `input` elements
 - [x] Add minified version *reset.min.css*  
